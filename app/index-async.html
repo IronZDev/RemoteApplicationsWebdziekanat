@@ -33,7 +33,13 @@
       'app.js',
       'view1/view1.js',
       'view2/view2.js',
-      'core/version/version.js',
+      'loginPage/loginPage.js',
+      'mainPage/mainPage.js',
+      'availableApplicationsPage/availableApplicationsPage.js',
+      'myApplicationsPage/myApplicationsPage.js',
+      'submitApplicationPage/submitApplicationPage.js',
+      'decisionDetailsPage/decisionDetailsPage.js',
+      'submitAppealPage/submitAppealPage.js',
       'core/version/version-directive.js',
       'core/version/interpolate-filter.js'
     ], function() {
@@ -46,8 +52,15 @@
 </head>
 <body ng-cloak>
   <ul class="menu">
-    <li><a href="#!/view1">view1</a></li>
-    <li><a href="#!/view2">view2</a></li>
+   <!--<li><a href="#!/view1">view1</a></li>
+    <li><a href="#!/view2">view2</a></li> -->
+      <li><a href="#!/login">{{loginLabel}}</a></li>
+      <li><a href="#!/mainPage">{{mainPageLabel}}</a></li>
+      <li><a href="#!/availableApplications">{{availableApplicationsLabel}}</a></li>
+      <li><a href="#!/myApplications">{{myApplicationsLabel}}</a></li>
+      <li><a href="#!/submitApplication">{{submitApplicationLabel}}</a></li>
+      <li><a href="#!/decisionDetails">{{decisionDetailsLabel}}</a></li>
+      <li><a href="#!/submitAppeal">{{submitAppealLabel}}</a></li>
   </ul>
 
   <div ng-view></div>
