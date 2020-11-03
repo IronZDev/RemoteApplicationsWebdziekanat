@@ -7,12 +7,15 @@
   "license": "MIT",
   "dependencies": {
     "angular": "^1.7.5",
+    "angular-gettext": "^2.4.1",
     "angular-loader": "^1.7.5",
     "angular-route": "^1.7.5",
     "html5-boilerplate": "0.0.1"
   },
   "devDependencies": {
+    "angular-gettext-cli": "^1.2.0",
     "angular-mocks": "^1.7.5",
+    "angular-translate": "^2.18.3",
     "cpx": "^1.5.0",
     "http-server": "^0.11.1",
     "jasmine-core": "^3.3.0",
