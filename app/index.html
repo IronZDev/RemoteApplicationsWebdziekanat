@@ -17,6 +17,7 @@
   <script src="lib/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
   <script src="lib/angular/angular.js"></script>
   <script src="lib/angular-route/angular-route.js"></script>
+  <script src="lib/angular-translate/dist/angular-translate.min.js"></script>
   <script src="app.js"></script>
   <!--<script src="view1/view1.js"></script>
   <script src="view2/view2.js"></script> -->
@@ -37,6 +38,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
 </head>
 <body ng-controller="MainController">
 
@@ -51,38 +53,45 @@
       <ul ng-show="true" class="navbar-nav" id="navbarItems">
         <li class="nav-item">
           <a class="nav-link" href=#!/mainPage">
-            <i class="fas fa-home fa-lg"></i> {{mainPageLabel}}
+            <i class="fas fa-home fa-lg"></i> {{'MAIN_PAGE' | translate}}
+          </a>
           </a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#!/availableApplications">
-            <i class="fas fa-book fa-lg"></i> {{availableApplicationsLabel}}
+            <i class="fas fa-book fa-lg"></i> {{'AVAILABLE_APPLICATIONS'| translate}}
           </a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#!/myApplications">
-            <i class="fas fa-book-open fa-lg"></i> {{myApplicationsLabel}}
+            <i class="fas fa-book-open fa-lg"></i> {{'SUBMITED_APPLICATIONS'| translate}}
           </a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#!/submitApplication">
-            <i class="fas fa-envelope fa-lg"></i> {{submitApplicationLabel}}
+            <i class="fas fa-envelope fa-lg"></i> {{'SUBMIT_AN_APPLICATION'| translate}}
           </a>
         </li>
         <li class="nav-item custom-icon-container">
           <a class="nav-link d-inline-flex" href="#!/decisionDetails">
-            <i class="fas fa-file-signature fa-lg"></i> {{decisionDetailsLabel}}
+            <i class="fas fa-file-signature fa-lg"></i> {{'DETAILS_OF_DECISIONS' | translate}}
           </a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#!/submitAppeal">
-            <i class="fas fa-envelope fa-lg"></i> {{submitAppealLabel}}
+            <i class="fas fa-envelope fa-lg"></i> {{'SUBMIT_AN_APPEAL'| translate}}
           </a>
         </li>
+        
       </ul>
+
       <a ng-show="true" class="nav-link logout-link px-0" href="#!/login">
-        <i class="fas fa-sign-out-alt fa-lg"></i> {{logoutLabel}}
+        <i class="fas fa-sign-out-alt fa-lg"></i> {{'LOG_OUT' | translate}}
       </a>
+    </div>
+    <div class="d-flex justify-content-end">
+      <button type="button" class="btn btn-primary mx-2 " ng-click="changeLanguage('pl')" translate="BUTTON_LANG_PL" ng-model="singleModel"></button>
+      <button type="button" class="btn btn-primary " ng-click="changeLanguage('en')" translate="BUTTON_LANG_EN" ng-model="singleModel"></button>
     </div>
   </nav>
 
@@ -90,7 +99,7 @@
 
   <footer class="page-footer text-center fixed-bottom bg-primary">
     <p class="text-white mt-1 mb-1">
-      {{footerNote}}
+      {{'FOOTER_NOTE'| translate}}
     </p>
   </footer>
 

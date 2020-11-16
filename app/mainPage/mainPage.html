@@ -1,61 +1,61 @@
 <div class="row ml-md-1">
     <div class="card border-primary col-md-3 mt-3 mx-3 mx-md-0" style="height: 100%">
-        <div class="card-header text-center">Welcome back <strong>{{student.name}}</strong>!</div>
+        <div class="card-header text-center">{{'WELCOME_BACK' | translate}} <strong>{{student.name}}</strong>!</div>
         <div class="card-body text-center">
             <img class="img-scale" src="https://cdn.iconscout.com/icon/free/png-256/avatar-372-456324.png" alt="Avatar">
-            <h3 class="card-title text-left mt-3">General information</h3>
+            <h3 class="card-title text-left mt-3">{{'GENERAL_INFORMATION' | translate}}</h3>
             <div class="text-left border-above border-primary">
                 <h5 class="card-text mt-2">
-                    Name: <strong>{{student.name}}</strong>
+                    {{'NAME' | translate}} <strong>{{student.name}}</strong>
                 </h5>
                 <h5 class="card-text">
-                    Student ID: <strong>{{student.ID}}</strong>
+                    {{'STUDENT_ID' | translate}} <strong>{{student.ID}}</strong>
                 </h5>
                 <h5 class="card-text">
-                    Department: <strong>{{student.department}}</strong>
+                    {{'DEPARTMENT' | translate}} <strong>{{student.department}}</strong>
                 </h5>
                 <h5 class="card-text">
-                    Current semester: <strong>{{student.semester}}</strong>
+                    {{'CURRENT_SEMESTER' | translate}} <strong>{{student.semester}}</strong>
                 </h5>
                 <h5 class="card-text mb-3">
-                    Average grade: <strong>{{student.getAverageGrade()}}</strong>
+                    {{'AVERAGE_GRADE' | translate}} <strong>{{student.getAverageGrade()}}</strong>
                 </h5>
             </div>
         </div>
     </div>
     <div class="col-md mt-3">
         <div class="card border-primary" style="height: 100%;">
-            <div class="card-header"><h2>Detailed information</h2></div>
+            <div class="card-header"><h2>{{'DETAILED_INFORMATION' | translate}}</h2></div>
             <div class="card-body">
                 <table class="table table-hover table-borderless table-responsive-md">
                     <tbody>
-                        <th class="card-title no-highlight"><h3>Studies details:</h3></th>
+                        <th class="card-title no-highlight"><h3>{{'STUDIES_DETAILS' | translate}}</h3></th>
                 <tr class="border-above border-primary h5">
-                    <td>Course:</td>
+                    <td translate>{{'COURSE' | translate}}</td>
                     <td><strong>{{student.course}}</strong></td>
-                    <td>Specialty:</td>
+                    <td translate>{{'SPECIALITY' | translate}}</td>
                     <td><strong>{{student.specialty}}</strong></td>
                 </tr>
                 <tr class="h5">
-                    <td>Type of studies:</td>
+                    <td translate>{{'TYP_OF_STUDIES' | translate}}</td>
                     <td><strong>{{student.studiesType}}</strong></td>
-                    <td>Length of studies:</td>
+                    <td translate>{{'LENGTH_OF_STUDIES' | translate}}</td>
                     <td><strong>{{student.lengthOfStudies}} years</strong></td>
                 </tr>
                 <tr>
                     <td class="no-highlight"></td>
                 </tr>
-                <th class="card-title no-highlight"><h3>Current data:</h3></th>
+                <th class="card-title no-highlight"><h3>{{'CURRENT_DATA' | translate}}</h3></th>
                 <tr class="border-above border-primary h5">
-                    <td>Current semester:</td>
+                    <td>{{'CURRENT_STUDY_SEMESTER' | translate}}</td>
                     <td><strong>{{student.currentSemester}}</strong></td>
-                    <td>Current year:</td>
+                    <td>{{'CURRENT_YEAR' | translate}}</td>
                     <td><strong>{{student.currentYear}}</strong></td>
                 </tr>
                 <tr class="h5">
-                    <td>ECTS gained:</td>
+                    <td>{{'ECTS_GAINED' | translate}}</td>
                     <td><strong>{{student.getAcquiredEcts()}}/{{student.getAllEcts()}}</strong></td>
-                    <td>Student status:</td>
+                    <td>{{'STUDENT_STATUS' | translate}}</td>
                     <td><strong>{{student.status}}</strong></td>
                 </tr>
                 </tbody>

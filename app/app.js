@@ -12,16 +12,98 @@ angular.module('myApp', [
   'myApp.submitApplicationPage',
   'myApp.decisionDetailsPage',
   'myApp.submitAppealPage',
-  'myApp.version'
+  'myApp.version',
+  'pascalprecht.translate',
 ]).
-config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
+config(['$locationProvider', '$routeProvider', '$translateProvider', function($locationProvider, $routeProvider, $translateProvider) {
+
+  var translationsEN = {
+    LOGIN: 'Login', 
+    MAIN_PAGE: 'Main Page',
+    AVAILABLE_APPLICATIONS: 'Available Applications',
+    SUBMITED_APPLICATIONS:'Submited applications', 
+    SUBMIT_AN_APPLICATION:'Submit an application',
+    DETAILS_OF_DECISIONS:'Details of decision', 
+    SUBMIT_AN_APPEAL: 'Submit an appeal', 
+    LOG_OUT:"Log out", 
+    FOOTER_NOTE:"Team programming - Team B", 
+
+    WELCOME_BACK:"Welcome back",
+    NAME:'Name:', 
+    STUDENT_ID:'Student ID:',
+    DEPARTMENT:'Department:',
+    CURRENT_SEMESTER: 'Current semester:',
+    AVERAGE_GRADE: 'Average grade:',
+    GENERAL_INFORMATION: 'General information',
+
+    DETAILED_INFORMATION: 'Detailed information',
+    STUDIES_DETAILS: 'Studies details:',
+    COURSE:'Course:',
+    SPECIALITY:'Specialty:',
+    TYP_OF_STUDIES:'Type of studies:',
+    LENGTH_OF_STUDIES:'Length of studies:',
+    CURRENT_DATA:'Current data:',
+    CURRENT_STUDY_SEMESTER:"Current semester:",
+    CURRENT_YEAR:'Current year:',
+    ECTS_GAINED:'ECTS gained:',
+    STUDENT_STATUS:'Student status:',
+
+    BUTTON_LANG_PL: 'Polish',
+    BUTTON_LANG_EN: 'English',
+  };
+   
+  var translationsPL= {
+    LOGIN: 'Login', 
+    MAIN_PAGE: 'Strona Główna',
+    AVAILABLE_APPLICATIONS: 'Dostępne wnioski',
+    SUBMITED_APPLICATIONS:'Złożone wnioski', 
+    SUBMIT_AN_APPLICATION:'Złóż wniosek',
+    DETAILS_OF_DECISIONS:'Szczegóły decyzji', 
+    SUBMIT_AN_APPEAL: 'Złóż odwołanie', 
+    LOG_OUT:'Wyloguj', 
+    FOOTER_NOTE:'Programowanie zespołowe - Grupa B', 
+
+    WELCOME_BACK:'Witaj z powrotem',
+    NAME:'Imię:',
+    STUDENT_ID:'ID Studenta:', 
+    DEPARTMENT:'Wydział:',
+    CURRENT_SEMESTER:'Obecny semestr:',
+    AVERAGE_GRADE:'Średnia ocen:',
+    GENERAL_INFORMATION:'Informacje ogólne',
+
+    DETAILED_INFORMATION:'Informacje szczegółowe',
+    STUDIES_DETAILS:'Szczegóły studiów',
+    COURSE:'Kurs',
+    SPECIALITY:'Specjalność',
+    TYP_OF_STUDIES:'Typ studiów',
+    LENGTH_OF_STUDIES:'Długość studiów',
+    CURRENT_DATA:'Obecne dane:',
+    CURRENT_STUDY_SEMESTER:"Obecny semestr:",
+    CURRENT_YEAR:'Obecny rok:',
+    ECTS_GAINED:'Zdobyte punkty ECTS:',
+    STUDENT_STATUS:'Status studenta:',
+
+    BUTTON_LANG_PL: 'Polski',
+    BUTTON_LANG_EN: 'Angielski',
+
+  };
+   
+  $translateProvider
+  $translateProvider.translations('en', translationsEN);
+  $translateProvider.translations('pl', translationsPL);
+  $translateProvider.fallbackLanguage('en'); 
+  $translateProvider.preferredLanguage('pl');
+
   $locationProvider.hashPrefix('!');
 
   $routeProvider.otherwise({redirectTo: '/mainPage'});
+  
 }])
-
-.controller('MainController', function($scope) {
-  $scope.loginLabel = "Logowanie";
+.controller('MainController', ['$scope', '$translate', function ($scope, $translate) {
+  $scope.changeLanguage = function (langKey) { 
+    $translate.use(langKey);
+  };
+  $scope.loginLabel = 'Login';
   $scope.mainPageLabel = "Strona główna";
   $scope.availableApplicationsLabel = "Dostępne wnioski";
   $scope.myApplicationsLabel = "Złożone wnioski";
@@ -29,5 +111,5 @@ config(['$locationProvider', '$routeProvider', function($locationProvider, $rout
   $scope.decisionDetailsLabel = "Szczegóły decyzji";
   $scope.submitAppealLabel = "Złóż odwołanie";
   $scope.logoutLabel = "Wyloguj";
-  $scope.footerNote = "Programowanie zespołowe - Grupa B";
-});
+  $scope.footerNote = "Programowanie zespołowe - Grupa B"; 
+}]);

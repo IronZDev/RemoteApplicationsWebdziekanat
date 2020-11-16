@@ -15,13 +15,13 @@ angular.module('myApp.mainPage', ['ngRoute'])
             ID: 234008,
             department: "WEEiA",
             semester: 2,
-            course: "Informatics",
-            specialty: "Distributed systems and mobile platforms",
-            studiesType: "Full-time",
+            course: "Informatyka",
+            specialty: "Systemy rozproszone i platformy mobilne",
+            studiesType: "Pełno-wymiarowe",
             lengthOfStudies: 1.5,
-            currentSemester: "2020/2021 Winter",
+            currentSemester: "2020/2021 Zima",
             currentYear: 1,
-            status: "Active, full-registration",
+            status: "Aktywny,pełna rejestracja",
             grades: [
                 {
                     course: "Techniki kompilacji",
