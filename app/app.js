@@ -7,13 +7,12 @@ angular.module('myApp', [
   //'myApp.view2',
   'myApp.loginPage',
   'myApp.mainPage',
-  'myApp.availableApplicationsPage',
   'myApp.myApplicationsPage',
   'myApp.submitApplicationPage',
-  'myApp.decisionDetailsPage',
   'myApp.submitAppealPage',
   'myApp.version',
   'pascalprecht.translate',
+  'myApp.dataService',
 ]).
 config(['$locationProvider', '$routeProvider', '$translateProvider', function($locationProvider, $routeProvider, $translateProvider) {
 
@@ -83,12 +82,8 @@ config(['$locationProvider', '$routeProvider', '$translateProvider', function($l
     ECTS_GAINED:'Zdobyte punkty ECTS:',
     STUDENT_STATUS:'Status studenta:',
 
-    BUTTON_LANG_PL: 'Polski',
-    BUTTON_LANG_EN: 'Angielski',
-
   };
-   
-  $translateProvider
+
   $translateProvider.translations('en', translationsEN);
   $translateProvider.translations('pl', translationsPL);
   $translateProvider.fallbackLanguage('en'); 
@@ -100,8 +95,16 @@ config(['$locationProvider', '$routeProvider', '$translateProvider', function($l
   
 }])
 .controller('MainController', ['$scope', '$translate', function ($scope, $translate) {
-  $scope.changeLanguage = function (langKey) { 
-    $translate.use(langKey);
+  $scope.currentLanguage = 'pl'
+  $scope.changeLanguage = function () {
+    if ($scope.currentLanguage === 'pl') {
+      $scope.currentLanguage = 'en';
+      $('.flag-icon').removeClass('flag-icon-gb').addClass('flag-icon-pl');
+    } else {
+      $scope.currentLanguage = 'pl';
+      $('.flag-icon').removeClass('flag-icon-pl').addClass('flag-icon-gb');
+    }
+    $translate.use($scope.currentLanguage);
   };
   $scope.loginLabel = 'Login';
   $scope.mainPageLabel = "Strona główna";
@@ -111,5 +114,5 @@ config(['$locationProvider', '$routeProvider', '$translateProvider', function($l
   $scope.decisionDetailsLabel = "Szczegóły decyzji";
   $scope.submitAppealLabel = "Złóż odwołanie";
   $scope.logoutLabel = "Wyloguj";
-  $scope.footerNote = "Programowanie zespołowe - Grupa B"; 
+  $scope.footerNote = "Programowanie zespołowe - Grupa B";
 }]);
