@@ -55,4 +55,34 @@ angular.module('myApp.dataService', [])
                 return sumOfEcts;
             }
         };
+    })
+    .factory('proposals', function() {
+        return { 
+            proposals:[
+                {
+                    name:"Wniosek o przydział do akademika"
+                },
+                {
+                    name:"Wniosek o indywidualny tryb zauczania"
+                },
+                {
+                    name:"Wniosek o pomoc socjalną"
+                },
+                {
+                    name:"Wniosek o zaliczenie przedmiotu"
+                },
+                {
+                    name:"Wniosek o przeniesienie"
+                },
+                {
+                    name:"Wniosek o powtarzanie przedmiotu"
+                },
+                {
+                    name:"Wniosek o zwrot opłaty za studia"
+                },
+                {
+                    name:"Wniosek o dodatkowy termin egzaminu"
+                }
+            ]  
+        };
     });

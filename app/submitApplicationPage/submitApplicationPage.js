@@ -9,6 +9,7 @@ angular.module('myApp.submitApplicationPage', ['ngRoute'])
         });
     }])
 
-    .controller('submitApplicationPageController', function($scope) {
-        $scope.toDoInfo = "Namiastka strony. Zaplanowana treść: formularz do składania wniosków";
+    .controller('submitApplicationPageController', function($scope,proposals) {
+        //$scope.toDoInfo = "wdwdwdwNamiastka strony. Zaplanowana treść: formularz do składania wniosków"; 
+        $scope.proposals = proposals;
     });

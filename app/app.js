@@ -49,6 +49,9 @@ config(['$locationProvider', '$routeProvider', '$translateProvider', function($l
 
     BUTTON_LANG_PL: 'Polish',
     BUTTON_LANG_EN: 'English',
+
+    SUBMIT:'Submit', 
+    AVAILABLE_PROPOSALS:'Available proposals'
   };
    
   var translationsPL= {
@@ -80,7 +83,10 @@ config(['$locationProvider', '$routeProvider', '$translateProvider', function($l
     CURRENT_STUDY_SEMESTER:"Obecny semestr:",
     CURRENT_YEAR:'Obecny rok:',
     ECTS_GAINED:'Zdobyte punkty ECTS:',
-    STUDENT_STATUS:'Status studenta:',
+    STUDENT_STATUS:'Status studenta:', 
+
+    SUBMIT:'Złóż',
+    AVAILABLE_PROPOSALS:'Dostępne wnioski'
 
   };
 
