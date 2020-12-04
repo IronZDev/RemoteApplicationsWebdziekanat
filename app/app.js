@@ -13,6 +13,7 @@ angular.module('myApp', [
   'myApp.version',
   'pascalprecht.translate',
   'myApp.dataService',
+  'ui.bootstrap'
 ]).
 config(['$locationProvider', '$routeProvider', '$translateProvider', function($locationProvider, $routeProvider, $translateProvider) {
 
@@ -46,9 +47,6 @@ config(['$locationProvider', '$routeProvider', '$translateProvider', function($l
     CURRENT_YEAR:'Current year:',
     ECTS_GAINED:'ECTS gained:',
     STUDENT_STATUS:'Student status:',
-
-    BUTTON_LANG_PL: 'Polish',
-    BUTTON_LANG_EN: 'English',
 
     SUBMIT:'Submit', 
     AVAILABLE_PROPOSALS:'Available proposals'
@@ -86,7 +84,8 @@ config(['$locationProvider', '$routeProvider', '$translateProvider', function($l
     STUDENT_STATUS:'Status studenta:', 
 
     SUBMIT:'Złóż',
-    AVAILABLE_PROPOSALS:'Dostępne wnioski'
+    AVAILABLE_PROPOSALS:'Dostępne wnioski',
+
 
   };
 

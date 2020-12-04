@@ -60,28 +60,36 @@ angular.module('myApp.dataService', [])
         return { 
             proposals:[
                 {
-                    name:"Wniosek o przydział do akademika"
+                    name:"Wniosek o przydział do akademika",
+                    topic:"przydział do akademika"
                 },
                 {
-                    name:"Wniosek o indywidualny tryb zauczania"
+                    name:"Wniosek o indywidualny tryb nauczania",
+                    topic:"indywidualny tryb nauczania"
                 },
                 {
-                    name:"Wniosek o pomoc socjalną"
+                    name:"Wniosek o pomoc socjalną",
+                    topic:"pomoc socjalna"
                 },
                 {
-                    name:"Wniosek o zaliczenie przedmiotu"
+                    name:"Wniosek o zaliczenie przedmiotu",
+                    topic: "zaliczenie przedmiotu"
                 },
                 {
-                    name:"Wniosek o przeniesienie"
+                    name:"Wniosek o przeniesienie",
+                    topic: "przeniesienie"
                 },
                 {
-                    name:"Wniosek o powtarzanie przedmiotu"
+                    name:"Wniosek o powtarzanie przedmiotu",
+                    topic: "powtarzanie przedmiotu"
                 },
                 {
-                    name:"Wniosek o zwrot opłaty za studia"
+                    name:"Wniosek o zwrot opłaty za studia",
+                    topic:"zwrot opłaty za studia"
                 },
                 {
-                    name:"Wniosek o dodatkowy termin egzaminu"
+                    name:"Wniosek o dodatkowy termin egzaminu",
+                    topic: "dodatkowy termin egzaminu"
                 }
             ]  
         };
