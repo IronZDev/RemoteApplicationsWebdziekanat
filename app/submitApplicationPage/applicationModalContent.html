@@ -7,23 +7,23 @@
 <div class="modal-body" id="modal-body">
     <form>
         <div class="form-group">
-            <label for="student-name" class="col-form-label">Name:</label>
+            <label for="student-name" class="col-form-label">Imię i nazwisko:</label>
             <input type="text" class="form-control" id="student-name" value="{{student.name}}" readonly>
         </div>
         <div class="form-group">
-            <label for="album-id" class="col-form-label">Album id:</label>
+            <label for="album-id" class="col-form-label">ID Studenta:</label>
             <input type="text" class="form-control" id="album-id" value="{{student.ID}}" readonly>
         </div>
         <div class="form-group">
-            <label for="study-course" class="col-form-label">Course:</label>
+            <label for="study-course" class="col-form-label">Kurs:</label>
             <input type="text" class="form-control" id="study-course" value="{{student.course}}" readonly>
         </div>
         <div class="form-group">
-            <label for="study-year" class="col-form-label">Year of study:</label>
+            <label for="study-year" class="col-form-label">Rok studiów:</label>
             <input type="text" class="form-control" id="study-year" value="{{student.currentYear}}" readonly>
         </div>
         <div class="form-group">
-            <label for="recipient" class="col-form-label">Recipient:</label>
+            <label for="recipient" class="col-form-label">Odbiorca:</label>
             <textarea class="form-control" id="recipient" rows="4" readonly>
 Prodziekan ds. studiów stacjonarnych
 Wydziału Elektrotechniki, Elektroniki, Informatyki i Automatyki
@@ -31,12 +31,22 @@ Politechniki Łódzkiej
             </textarea>
         </div>
         <div class="form-group">
-            <label for="date" class="col-form-label">Date:</label>
-            <input type="text" class="form-control" id="date" value="Łódź, {{currentDate}}" readonly>
+            <label for="date" class="col-form-label">Data i miejscowość:</label>
+            <input type="text" class="form-control" id="date" value="Łódź, {{currentDate}}">
+        </div>
+        <div class="form-group">
+            <label for="justification" class="col-form-label">Uzasadnienie:</label>
+            <textarea class="form-control" id="justification" rows="4">
+
+            </textarea>
+        </div>
+        <div class="form-group">
+            <label for="attachments" class="col-form-label">Załączniki:</label>
+            <input type="file" data-show-upload="true" data-show-caption="true" class="form-control" id="attachments" multiple>
         </div>
     </form>
 </div>
 <div class="modal-footer">
-    <button type="button" class="btn btn-secondary" ng-click="cancel()">Close</button>
-    <button type="button" class="btn btn-primary" ng-click="submit()">Send message</button>
+    <button type="button" class="btn btn-secondary" ng-click="cancel()">Anuluj</button>
+    <button type="button" class="btn btn-primary" ng-click="submit()">Wyślij podanie</button>
 </div>
