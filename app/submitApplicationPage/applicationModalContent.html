@@ -24,10 +24,7 @@
         </div>
         <div class="form-group">
             <label for="recipient" class="col-form-label">Odbiorca:</label>
-            <textarea class="form-control" id="recipient" rows="4" readonly>
-Prodziekan ds. studiów stacjonarnych
-Wydziału Elektrotechniki, Elektroniki, Informatyki i Automatyki
-Politechniki Łódzkiej
+            <textarea class="form-control" id="recipient" rows="4" readonly>{{sendTo}}
             </textarea>
         </div>
         <div class="form-group">
@@ -36,7 +33,7 @@ Politechniki Łódzkiej
         </div>
         <div class="form-group">
             <label for="justification" class="col-form-label">Uzasadnienie:</label>
-            <textarea class="form-control" id="justification" rows="4">
+            <textarea class="form-control" id="justification" rows="4" ng-model="justification">
 
             </textarea>
         </div>

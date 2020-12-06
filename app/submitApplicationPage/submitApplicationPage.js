@@ -36,14 +36,39 @@ angular.module('myApp.submitApplicationPage', ['ngRoute','ui.bootstrap'])
         }
     })
 
-    .controller('submitApplicationModalController', function ($scope, $uibModalInstance, currentProposal, student) {
+    .controller('submitApplicationModalController', function ($scope, $uibModalInstance, currentProposal, student, $http) {
         $scope.student = student;
         $scope.currentProposal = currentProposal;
         $scope.currentDate = (new Date).toLocaleDateString();
+        $scope.sendTo = "Prodziekan ds. studiów stacjonarnych\n" +
+            "Wydziału Elektrotechniki, Elektroniki, Informatyki i Automatyki\n" +
+            "Politechniki Łódzkiej";
+        $scope.justification = "";
 
         $scope.submit = function () {
             //{...}
-            alert("You clicked the submit button.");
+            //alert("You clicked the submit button.");
+            var data = {
+                name: student.name,
+                album: student.ID,
+                course: student.course,
+                year: student.currentYear,
+                recipient: $scope.sendTo,
+                proposal: currentProposal.name,
+                date: $scope.currentDate,
+                justification: $scope.justification
+            };
+            $http.post('http://localhost:9000/proposals', JSON.stringify(data)).then(function (response) {
+                if (response.data)
+                    alert("OK");
+            }, function (response) {
+                alert("Something went wrong");
+                $scope.msg = "Service not Exists";
+                $scope.statusval = response.status;
+                $scope.statustext = response.statusText;
+                $scope.headers = response.headers();
+            });
+
             $uibModalInstance.close();
         };
 
