@@ -1,0 +1,48 @@
+{
+  "proposals": [
+    {
+      "name": "Maciej Stokfisz",
+      "album": 234008,
+      "course": "Informatyka",
+      "year": 1,
+      "recipient": "Prodziekan ds. studiów stacjonarnych\nWydziału Elektrotechniki, Elektroniki, Informatyki i Automatyki\nPolitechniki Łódzkiej",
+      "proposal": "Wniosek o przydział do akademika",
+      "date": "6.12.2020",
+      "justification": "Jestem z daleka.",
+      "attachment": [
+        {
+          "filetype": "text/plain",
+          "filename": "uwagi_od_Macieja.txt",
+          "filesize": 64,
+          "base64": "TmF2LWJhciBkbyBwb3ByYXd5IA0Kbm9kZV9tb2R1bGUgZG8gd3l3YWxlbmlhIHcgcmF6aWUgcHJvYmxlbcOzdw=="
+        }
+      ],
+      "id": 1
+    },
+    {
+      "name": "Maciej Stokfisz",
+      "album": 234008,
+      "course": "Informatyka",
+      "year": 1,
+      "recipient": "Prodziekan ds. studiów stacjonarnych\nWydziału Elektrotechniki, Elektroniki, Informatyki i Automatyki\nPolitechniki Łódzkiej",
+      "proposal": "Wniosek o powtarzanie przedmiotu",
+      "date": "6.12.2020",
+      "justification": "Nie zdałem. Tyle w temacie.",
+      "attachment": [
+        {
+          "filetype": "text/plain",
+          "filename": "notatki_ programowanie zespołowe.txt",
+          "filesize": 148,
+          "base64": "LSBvcHJhY293YcSHLCBqYWtpZSBzdHJvbnkgKHdpZG9raSkgYsSZZMSFIHd5a29yenlzdHl3YW5lIHcgcHJvamVrY2llKSBpIHdzdGF3acSHIHcga29kIGFwbGlrYWNqaSAocGFtacSZdGHEhyBvIG5hdiBiYXIhLCBkYW5lIHphY3p5dHl3YW5lIHogbW9kZWx1KQ=="
+        },
+        {
+          "filetype": "text/plain",
+          "filename": "lista_stron_w_aplikacji.txt",
+          "filesize": 357,
+          "base64": "UGxhbm93YW5lIHN0cm9ueSB3IGFwbGlrYWNqaToNCi0gbGlzdGEgd25pb3Nrw7N3IGRvIHrFgm/FvGVuaWEgKGFwcGxpY2F0aW9uIGxpc3QpICgrKQ0KLSBza8WCYWRhbmllIHduaW9za3UgKGFwcGxpY2F0aW9uIGRvZXIpIC8vdHV0YWogamVzdCBkb8WCYWN6ZW5pZSB6YcWCxIVjem5pa8OzdyAoKykNCi0gbGlzdGEgesWCb8W8b255Y2ggd25pb3Nrw7N3IGkgaWNoIHN0YXR1cyAoKykNCi0gc3Ryb25hIG8gZGVjeXpqaSBpIGplaiB1emFzYWRuaWVuaXUgKCspDQotIHN0cm9uYSBkbyBvZHdvxYJhbmlhIHNpxJkgb2QgZGVjeXpqaQ0KLSBpbmZvcm1hY2plIG8gc3R1ZGVuY2llICgrKQ0KLSBzdHJvbmEgbG9nb3dhbmlhICgrKQ0K"
+        }
+      ],
+      "id": 2
+    }
+  ]
+}

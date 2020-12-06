@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('myApp.submitApplicationPage', ['ngRoute','ui.bootstrap'])
+angular.module('myApp.submitApplicationPage', ['ngRoute','ui.bootstrap', 'naif.base64'])
 
     .config(['$routeProvider', function($routeProvider) {
         $routeProvider.when('/submitApplication', {
@@ -44,6 +44,7 @@ angular.module('myApp.submitApplicationPage', ['ngRoute','ui.bootstrap'])
             "Wydziału Elektrotechniki, Elektroniki, Informatyki i Automatyki\n" +
             "Politechniki Łódzkiej";
         $scope.justification = "";
+        $scope.myfile = null;
 
         $scope.submit = function () {
             //{...}
@@ -56,11 +57,12 @@ angular.module('myApp.submitApplicationPage', ['ngRoute','ui.bootstrap'])
                 recipient: $scope.sendTo,
                 proposal: currentProposal.name,
                 date: $scope.currentDate,
-                justification: $scope.justification
+                justification: $scope.justification,
+                attachment: $scope.myfile
             };
             $http.post('http://localhost:9000/proposals', JSON.stringify(data)).then(function (response) {
                 if (response.data)
-                    alert("OK");
+                    alert("Proposal saved successfully");
             }, function (response) {
                 alert("Something went wrong");
                 $scope.msg = "Service not Exists";

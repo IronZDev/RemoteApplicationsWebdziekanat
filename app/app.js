@@ -13,6 +13,7 @@ angular.module('myApp', [
   'myApp.version',
   'pascalprecht.translate',
   'myApp.dataService',
+  'naif.base64',
   'ui.bootstrap'
 ]).
 config(['$locationProvider', '$routeProvider', '$translateProvider', function($locationProvider, $routeProvider, $translateProvider) {
