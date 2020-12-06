@@ -43,6 +43,18 @@
         }
       ],
       "id": 2
+    },
+    {
+      "name": "Maciej Stokfisz",
+      "album": 234008,
+      "course": "Informatyka",
+      "year": 1,
+      "recipient": "Prodziekan ds. studiów stacjonarnych\nWydziału Elektrotechniki, Elektroniki, Informatyki i Automatyki\nPolitechniki Łódzkiej",
+      "proposal": "Wniosek o zwrot opłaty za studia",
+      "date": "6.12.2020",
+      "justification": "Proszę oddać kasę. Period",
+      "attachment": null,
+      "id": 3
     }
   ]
 }
