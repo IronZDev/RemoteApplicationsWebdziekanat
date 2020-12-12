@@ -121,4 +121,19 @@ config(['$locationProvider', '$routeProvider', '$translateProvider', function($l
   $scope.submitAppealLabel = "Złóż odwołanie";
   $scope.logoutLabel = "Wyloguj";
   $scope.footerNote = "Programowanie zespołowe - Grupa B";
+
+  $scope.navElementChange = function($event) {
+    var navItems = document.querySelectorAll('#navbarItems li');
+    for (var i=0; i<navItems.length; i++) {
+      console.log(navItems[i])
+      //Remove old active
+      if (navItems[i].classList.contains('active')) {
+        navItems[i].classList.remove('active');
+      }
+      //Add new active
+      if (navItems[i].contains(angular.element($event.target)[0])) {
+        navItems[i].classList.add('active');
+      }
+    }
+  };
 }]);

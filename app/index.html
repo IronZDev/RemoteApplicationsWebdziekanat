@@ -49,23 +49,23 @@
     </button>
     <div class="justify-content-between collapse navbar-collapse" id="navbarContent">
       <ul ng-show="true" class="navbar-nav" id="navbarItems">
-        <li class="nav-item">
-          <a class="nav-link active" href=#!/mainPage">
+        <li class="nav-item active" ng-click="navElementChange($event)">
+          <a class="nav-link" href=#!/mainPage">
             <i class="fas fa-home fa-lg"></i> {{'MAIN_PAGE' | translate}}
           </a>
           </a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item" ng-click="navElementChange($event)">
           <a class="nav-link" href="#!/myApplications">
             <i class="fas fa-book-open fa-lg"></i> {{'SUBMITED_APPLICATIONS'| translate}}
           </a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item" ng-click="navElementChange($event)">
           <a class="nav-link" href="#!/submitApplication">
             <i class="fas fa-envelope fa-lg"></i> {{'SUBMIT_AN_APPLICATION'| translate}}
           </a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item" ng-click="navElementChange($event)">
           <a class="nav-link" href="#!/submitAppeal">
             <i class="fas fa-envelope fa-lg"></i> {{'SUBMIT_AN_APPEAL'| translate}}
           </a>
