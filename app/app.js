@@ -9,7 +9,6 @@ angular.module('myApp', [
   'myApp.mainPage',
   'myApp.myApplicationsPage',
   'myApp.submitApplicationPage',
-  'myApp.submitAppealPage',
   'myApp.version',
   'pascalprecht.translate',
   'myApp.dataService',
