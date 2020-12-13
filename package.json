@@ -15,7 +15,8 @@
     "flag-icon-css": "^3.5.0",
     "html5-boilerplate": "0.0.1",
     "json-server": "^0.16.3",
-    "npm": "^6.14.9"
+    "npm": "^6.14.9",
+    "npm-run-all": "^4.1.5"
   },
   "devDependencies": {
     "angular-gettext-cli": "^1.2.0",
@@ -34,7 +35,9 @@
     "update-deps": "npm update",
     "postupdate-deps": "npm run copy-libs",
     "copy-libs": "cpx \"node_modules/{angular,angular-*,html5-boilerplate/dist}/**/*\" app/lib -C",
+    "start-json-server": "npx json-server --watch db.json --port 9000",
     "start": "start http://localhost:8000 & http-server -a localhost -p 8000 -c-1 ./app",
+    "start-all": "npm-run-all -p start-json-server start",
     "pretest": "npm install",
     "test": "karma start karma.conf.js",
     "test-single-run": "npm test -- --single-run",
