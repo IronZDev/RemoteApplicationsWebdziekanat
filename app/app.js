@@ -49,7 +49,9 @@ config(['$locationProvider', '$routeProvider', '$translateProvider', function($l
     STUDENT_STATUS:'Student status:',
 
     SUBMIT:'Submit', 
-    AVAILABLE_PROPOSALS:'Available proposals'
+    AVAILABLE_PROPOSALS:'Available proposals',
+
+    SUBMITED_PROPOSALS: 'Submited proposals'
   };
    
   var translationsPL= {
@@ -85,6 +87,8 @@ config(['$locationProvider', '$routeProvider', '$translateProvider', function($l
 
     SUBMIT:'Złóż',
     AVAILABLE_PROPOSALS:'Dostępne wnioski',
+    
+    SUBMITED_PROPOSALS: 'Złożone wnioski'
 
 
   };
