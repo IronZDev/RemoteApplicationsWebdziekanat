@@ -55,6 +55,66 @@
       "justification": "Proszę oddać kasę. Period",
       "attachment": null,
       "id": 3
+    },
+    {
+      "name": "Maciej Stokfisz",
+      "album": 234008,
+      "course": "Informatyka",
+      "year": 1,
+      "recipient": "Prodziekan ds. studiów stacjonarnych\nWydziału Elektrotechniki, Elektroniki, Informatyki i Automatyki\nPolitechniki Łódzkiej",
+      "proposal": "Wniosek o przydział do akademika",
+      "date": "14.12.2020",
+      "justification": "",
+      "attachment": null,
+      "id": 4
+    },
+    {
+      "name": "Maciej Stokfisz",
+      "album": 234008,
+      "course": "Informatyka",
+      "year": 1,
+      "recipient": "Prodziekan ds. studiów stacjonarnych\nWydziału Elektrotechniki, Elektroniki, Informatyki i Automatyki\nPolitechniki Łódzkiej",
+      "proposal": "Wniosek o przydział do akademika",
+      "date": "14.12.2020",
+      "justification": "",
+      "attachment": null,
+      "id": 5
+    },
+    {
+      "name": "Maciej Stokfisz",
+      "album": 234008,
+      "course": "Informatyka",
+      "year": 1,
+      "recipient": "Prodziekan ds. studiów stacjonarnych\nWydziału Elektrotechniki, Elektroniki, Informatyki i Automatyki\nPolitechniki Łódzkiej",
+      "proposal": "Wniosek o przydział do akademika",
+      "date": "14.12.2020",
+      "justification": "",
+      "attachment": null,
+      "id": 6
+    },
+    {
+      "name": "Maciej Stokfisz",
+      "album": 234008,
+      "course": "Informatyka",
+      "year": 1,
+      "recipient": "Prodziekan ds. studiów stacjonarnych\nWydziału Elektrotechniki, Elektroniki, Informatyki i Automatyki\nPolitechniki Łódzkiej",
+      "proposal": "Wniosek o przydział do akademika",
+      "date": "14.12.2020",
+      "justification": "",
+      "attachment": null,
+      "id": 7
+    },
+    {
+      "name": "Maciej Stokfisz",
+      "album": 234008,
+      "course": "Informatyka",
+      "year": 1,
+      "recipient": "Prodziekan ds. studiów stacjonarnych\nWydziału Elektrotechniki, Elektroniki, Informatyki i Automatyki\nPolitechniki Łódzkiej",
+      "proposal": "Wniosek o przydział do akademika",
+      "date": "14.12.2020",
+      "justification": "",
+      "attachment": null,
+      "id": 8
     }
   ]
 }
