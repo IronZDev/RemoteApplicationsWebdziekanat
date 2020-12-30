@@ -9,6 +9,14 @@ angular.module('myApp.myApplicationsPage', ['ngRoute'])
         });
     }])
 
-    .controller('myApplicationsPageController', function($scope) {
+    .controller('myApplicationsPageController', function($scope, $http) {
         $scope.toDoInfo = "Namiastka strony. Zaplanowa treść: lista wniosków, które student złożył, wraz z informacją o ich statusie";
+        $scope.submittedApplications = null;
+        $http.get('http://localhost:9000/proposals').then(function (response) {
+            if (response.data)
+                console.log("Data loaded properly");
+                $scope.submittedApplications = response.data;
+        }, function (response) {
+            console.log("Something went wrong");
+        });
     });
