@@ -44,6 +44,7 @@ angular.module('myApp.submitApplicationPage', ['ngRoute','ui.bootstrap', 'naif.b
             "Wydziału Elektrotechniki, Elektroniki, Informatyki i Automatyki\n" +
             "Politechniki Łódzkiej";
         $scope.justification = "";
+        $scope.place = "Łódź";
         $scope.myfile = null;
 
         $scope.submit = function () {
@@ -57,6 +58,7 @@ angular.module('myApp.submitApplicationPage', ['ngRoute','ui.bootstrap', 'naif.b
                 recipient: $scope.sendTo,
                 proposal: currentProposal.name,
                 date: $scope.currentDate,
+                city: $scope.place,
                 justification: $scope.justification,
                 attachment: $scope.myfile
             };
