@@ -60,7 +60,10 @@ angular.module('myApp.submitApplicationPage', ['ngRoute','ui.bootstrap', 'naif.b
                 date: $scope.currentDate,
                 city: $scope.place,
                 justification: $scope.justification,
-                attachment: $scope.myfile
+                attachment: $scope.myfile,
+                status: "WAITING_FOR_INITIAL_REVIEW",
+                status_justification: "",
+                status_last_update: $scope.currentDate
             };
             $http.post('http://localhost:9000/proposals', JSON.stringify(data)).then(function (response) {
                 if (response.data)

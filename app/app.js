@@ -51,7 +51,8 @@ config(['$locationProvider', '$routeProvider', '$translateProvider', function($l
     SUBMIT:'Submit', 
     AVAILABLE_PROPOSALS:'Available proposals',
 
-    SUBMITED_PROPOSALS: 'Submited proposals'
+    SUBMITED_PROPOSALS: 'Submited proposals',
+    SUBMIT_APPEAL: 'Submit appeal'
   };
    
   var translationsPL= {
@@ -88,7 +89,8 @@ config(['$locationProvider', '$routeProvider', '$translateProvider', function($l
     SUBMIT:'Złóż',
     AVAILABLE_PROPOSALS:'Dostępne wnioski',
     
-    SUBMITED_PROPOSALS: 'Złożone wnioski'
+    SUBMITED_PROPOSALS: 'Złożone wnioski',
+    SUBMIT_APPEAL: 'Złóż odwołanie'
 
 
   };

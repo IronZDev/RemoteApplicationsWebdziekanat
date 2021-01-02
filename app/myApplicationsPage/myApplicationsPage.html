@@ -6,10 +6,80 @@
                     <div class="card-header"><h2>{{'SUBMITED_PROPOSALS' | translate}}</h2></div>
                     <div class="card-body">
                         <ul class="list-group-flush">
-                            <li class="list-group-item" ng-repeat="application in submittedApplications">
-                                <div class="row justify-content-between"> 
-                                    <div class="col-9">
-                                         <h3>{{application.proposal}}   {{application.date}}</h3>
+                            <li class="list-group-item" style="vertical-align: middle;" ng-repeat="application in submittedApplications">
+                                <div class="row justify-content-between">
+                                    <div class="col-5">
+                                         <h4>{{application.proposal}}</h4>
+                                    </div>
+                                    <div class="col-3">
+                                        <div ng-if="application.status === 'WAITING_FOR_INITIAL_REVIEW'">
+                                            <div class="row no-gutters">
+                                                <div class="col mr-1">
+                                                    <div class="progress">
+                                                        <div class="progress-bar bg-success progress-bar-striped" role="progressbar" style="width: 0" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-1" data-toggle="tooltip" data-html="true" data-placement="top" title="" tooltip data-original-title="Your proposal is waiting for initial review by your student's office. <br> Last update: {{application.status_last_update}}">
+                                                    <i class="fas fa-info-circle"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div ng-if="application.status === 'WAITING_FOR_DEAN'">
+                                            <div class="row no-gutters">
+                                                <div class="col mr-1">
+                                                    <div class="progress">
+                                                        <div class="progress-bar bg-danger progress-bar-striped" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-1" data-toggle="tooltip" data-html="true" data-placement="top" title="" tooltip data-original-title="Your proposal is handed to the Dean. <br> Last update: {{application.status_last_update}}">
+                                                    <i class="fas fa-info-circle"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div ng-if="application.status === 'ADDITIONAL_INFO_REQUIRED'">
+                                            <div class="row no-gutters">
+                                                <div class="col mr-1">
+                                                    <div class="progress">
+                                                        <div class="progress-bar bg-primary progress-bar-striped" role="progressbar" style="width: 60%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-1" data-toggle="tooltip" data-html="true" data-placement="top" title="" tooltip data-original-title="{{application.status_justification}} <br> Last update: {{application.status_last_update}}">
+                                                    <i class="fas fa-exclamation-triangle"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div ng-if="application.status === 'SUCCESS'">
+                                            <div class="row no-gutters">
+                                                <div class="col mr-1">
+                                                    <div class="progress">
+                                                        <div class="progress-bar bg-success progress-bar-striped" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-1" data-toggle="tooltip" data-html="true" data-placement="top" title="" tooltip data-original-title="Your application has been accepted! <br> Last update: {{application.status_last_update}}">
+                                                    <i class="fas fa-check-circle"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div ng-if="application.status === 'DENIED'">
+                                            <div class="row no-gutters">
+                                                <div class="col mr-1">
+                                                    <div class="progress">
+                                                        <div class="progress-bar bg-primary progress-bar-striped" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-1" data-toggle="tooltip" data-html="true" data-placement="top" title="" tooltip data-original-title="{{application.status_justification}} <br> Last update: {{application.status_last_update}}">
+                                                    <i class="fas fa-times-circle"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                        <div ng-if="application.status === 'DENIED'">
+                                            <button type="button" data-toggle="appealModal" ng-click="" data-target="appealModal" class="btn btn-primary">{{'SUBMIT_APPEAL' | translate}}</button>
+                                        </div>
+                                        <div ng-if="application.status !== 'DENIED'">
+                                            <button type="button" data-toggle="appealModal" ng-click="" data-target="appealModal" class="btn btn-primary" disabled>{{'SUBMIT_APPEAL' | translate}}</button>
+                                        </div>
                                     </div>
                                 </div>
                             </li>
@@ -20,3 +90,9 @@
         </div>
     </div>
 </div>
+<script>
+    $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+    console.log("test");
+</script>

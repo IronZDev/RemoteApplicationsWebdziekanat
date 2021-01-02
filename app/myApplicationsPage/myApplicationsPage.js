@@ -19,4 +19,24 @@ angular.module('myApp.myApplicationsPage', ['ngRoute'])
         }, function (response) {
             console.log("Something went wrong");
         });
+
+        // $scope.$watch('$viewContentLoaded',
+        //     function() {
+        //         $timeout(function() {
+        //             $('[data-toggle="tooltip"]').tooltip();
+        //         },0);
+        //     });
+        // angular.element(document).ready(function () {
+        //     $('[data-toggle="tooltip"]').tooltip();        });
+        // $(document).ready(function(){
+        //     $('[data-toggle="tooltip"]').tooltip();
+        // });
+    })
+    .directive('tooltip', function(){
+        return {
+            restrict: 'A',
+            link: function(scope, element, attrs){
+                $(element).tooltip();
+            }
+        };
     });
