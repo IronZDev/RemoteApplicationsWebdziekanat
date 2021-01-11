@@ -81,7 +81,6 @@ angular.module('myApp.submitApplicationPage', ['ngRoute','ui.bootstrap', 'naif.b
 
         $scope.cancel = function () {
             //{...}
-            alert("You clicked the cancel button.");
             $uibModalInstance.dismiss('cancel');
         };
     });

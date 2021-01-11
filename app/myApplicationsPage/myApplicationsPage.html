@@ -75,10 +75,10 @@
                                     </div>
                                     <div class="col-2">
                                         <div ng-if="application.status === 'DENIED'">
-                                            <button type="button" data-toggle="appealModal" ng-click="" data-target="appealModal" class="btn btn-primary">{{'SUBMIT_APPEAL' | translate}}</button>
+                                            <button type="button" data-toggle="appealModal" ng-click="openModal(application)" data-target="appealModal" class="btn btn-primary">{{'SUBMIT_APPEAL' | translate}}</button>
                                         </div>
                                         <div ng-if="application.status !== 'DENIED'">
-                                            <button type="button" data-toggle="appealModal" ng-click="" data-target="appealModal" class="btn btn-primary" disabled>{{'SUBMIT_APPEAL' | translate}}</button>
+                                            <button type="button" data-toggle="appealModal" ng-click="openModal(application)" data-target="appealModal" class="btn btn-primary" disabled>{{'SUBMIT_APPEAL' | translate}}</button>
                                         </div>
                                     </div>
                                 </div>

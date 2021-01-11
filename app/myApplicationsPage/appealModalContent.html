@@ -1,0 +1,24 @@
+<div class="modal-header" id="modal-header">
+    <h1 class="modal-title" id="applicationModalLabel">Odwołanie od {{application.name}}</h1>
+    <button type="button" class="close" ng-click="cancel()" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<div class="modal-body" id="modal-body">
+    <form>
+        <div class="form-group">
+            <label for="date" class="col-form-label">Data i miejscowość:</label>
+            <input type="text" class="form-control" id="date" value="{{place}}, {{currentDate}}">
+        </div>
+        <div class="form-group">
+            <label for="justification" class="col-form-label">Uzasadnienie odwołania:</label>
+            <textarea class="form-control" id="justification" rows="4" ng-model="justification">
+
+            </textarea>
+        </div>
+    </form>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-secondary" ng-click="cancel()">Anuluj</button>
+    <button type="button" class="btn btn-primary" ng-click="submit()">Wyślij odwołanie</button>
+</div>
