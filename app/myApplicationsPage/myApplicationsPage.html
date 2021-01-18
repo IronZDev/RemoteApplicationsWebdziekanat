@@ -20,7 +20,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-1" data-toggle="tooltip" data-html="true" data-placement="top" title="" tooltip data-original-title="Your proposal is waiting for initial review by your student's office. <br> Last update: {{application.status_last_update}}">
-                                                    <i class="fas fa-info-circle"></i>
+                                                    <i class="fas fa-info-circle" style="color: #ffcc00"></i>
                                                 </div>
                                             </div>
                                         </div>
@@ -32,7 +32,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-1" data-toggle="tooltip" data-html="true" data-placement="top" title="" tooltip data-original-title="Your proposal is handed to the Dean. <br> Last update: {{application.status_last_update}}">
-                                                    <i class="fas fa-info-circle"></i>
+                                                    <i class="fas fa-info-circle " style="color: #ffcc00"></i>
                                                 </div>
                                             </div>
                                         </div>
@@ -44,7 +44,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-1" data-toggle="tooltip" data-html="true" data-placement="top" title="" tooltip data-original-title="{{application.status_justification}} <br> Last update: {{application.status_last_update}}">
-                                                    <i class="fas fa-exclamation-triangle"></i>
+                                                    <i class="fas fa-exclamation-triangle" style="color: #D9230F"></i>
                                                 </div>
                                             </div>
                                         </div>
@@ -56,7 +56,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-1" data-toggle="tooltip" data-html="true" data-placement="top" title="" tooltip data-original-title="Your application has been accepted! <br> Last update: {{application.status_last_update}}">
-                                                    <i class="fas fa-check-circle"></i>
+                                                    <i class="fas fa-check-circle" style="color: #469408"></i>
                                                 </div>
                                             </div>
                                         </div>
@@ -68,7 +68,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-1" data-toggle="tooltip" data-html="true" data-placement="top" title="" tooltip data-original-title="{{application.status_justification}} <br> Last update: {{application.status_last_update}}">
-                                                    <i class="fas fa-times-circle"></i>
+                                                    <i class="fas fa-times-circle" style="color: #D9230F"></i>
                                                 </div>
                                             </div>
                                         </div>
@@ -77,7 +77,10 @@
                                         <div ng-if="application.status === 'DENIED'">
                                             <button type="button" data-toggle="appealModal" ng-click="openModal(application)" data-target="appealModal" class="btn btn-primary">{{'SUBMIT_APPEAL' | translate}}</button>
                                         </div>
-                                        <div ng-if="application.status !== 'DENIED'">
+                                        <div ng-if="application.status == 'ADDITIONAL_INFO_REQUIRED'">
+                                            <button type="button" data-toggle="correctModal" ng-click="openCorrectModal(application)" data-target="appealModal" class="btn btn-primary">{{'CORRECT_PROPOSAL' | translate}}</button>
+                                        </div>
+                                        <div ng-if="application.status !== 'DENIED' && application.status !== 'ADDITIONAL_INFO_REQUIRED'">
                                             <button type="button" data-toggle="appealModal" ng-click="openModal(application)" data-target="appealModal" class="btn btn-primary" disabled>{{'SUBMIT_APPEAL' | translate}}</button>
                                         </div>
                                     </div>
