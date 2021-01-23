@@ -57,12 +57,13 @@
       "year": 1,
       "recipient": "Prodziekan ds. studiów stacjonarnych\nWydziału Elektrotechniki, Elektroniki, Informatyki i Automatyki\nPolitechniki Łódzkiej",
       "proposal": "Wniosek o zwrot opłaty za studia",
-      "date": "6.12.2020",
-      "justification": "Proszę oddać kasę. Period",
+      "date": "23.01.2021",
+      "city": "Łódź",
+      "justification": "Uprzejmie proszę o zwrot poniesionej opłaty",
       "attachment": null,
-      "status": "ADDITIONAL_INFO_REQUIRED",
-      "status_justification": "Signature missing.",
-      "status_last_update": "6.12.2020",
+      "status": "WAITING_FOR_INITIAL_REVIEW",
+      "status_justification": "",
+      "status_last_update": "23.01.2021",
       "id": 3
     },
     {
@@ -171,6 +172,29 @@
       "status_justification": "",
       "status_last_update": "31.12.2020",
       "id": 10
+    },
+    {
+      "name": "Maciej Stokfisz",
+      "album": 234008,
+      "course": "Informatyka",
+      "year": 1,
+      "recipient": "Prodziekan ds. studiów stacjonarnych\nWydziału Elektrotechniki, Elektroniki, Informatyki i Automatyki\nPolitechniki Łódzkiej",
+      "proposal": "Wniosek o powtarzanie przedmiotu",
+      "date": "23.01.2021",
+      "city": "Łódź",
+      "justification": "Oj, dużo tego będzie...\nBARDZO DUŻO.",
+      "attachment": [
+        {
+          "filetype": "text/plain",
+          "filename": "bioinformatyka - notatki z labo.txt",
+          "filesize": 296,
+          "base64": "SmVzdCB6ZXNww7PFgiBuYSB0ZWFtcw0KU2VrY2phIFBsaWtpIC0+IE1hdGVyaWHFgnkgeiB6YWrEmcSHICh3c3TEmXBuZSBwcnp5Z290b3dhbmllIHNpxJksIHphZGFuaWEgZG8gc2Ftb2R6aWVsbmVnbyBwcnp5Z290b3dhbmlhIHNpxJkgc8SFIG9kZHppZWxuZSBkbGEga2HFvGRlaiB6IHBvZGdydXAsIHdpZWMgdHJ6ZWJhIHBhbWnEmXRhxIcsIGFieSBrb3J6eXN0YcSHIHogb2Rwb3dpZWRuaWVnbyBwbGlrdSkNCg0KUmFwb3J0IHogemFqxJnEhyBuYSB6YWrEmWNpYQ0KDQpiaW9fYzEgKG9nw7NsbmUpDQpiaW9fYzFfdjI="
+        }
+      ],
+      "status": "WAITING_FOR_INITIAL_REVIEW",
+      "status_justification": "",
+      "status_last_update": "23.01.2021",
+      "id": 11
     }
   ]
 }
