@@ -53,7 +53,18 @@ config(['$locationProvider', '$routeProvider', '$translateProvider', function($l
 
     SUBMITED_PROPOSALS: 'Submited proposals',
     SUBMIT_APPEAL: 'Submit appeal',
-    CORRECT_PROPOSAL: 'Correct proposal'
+    CORRECT_PROPOSAL: 'Correct proposal', 
+
+    NAME_AND_SURNAME:'Name and surname', 
+    ID_STUDENT: 'ID Student', 
+    COURSE: 'Course', 
+    YEAR_OF_STUDY: 'Year of study', 
+    RECEIVER: 'Receiver', 
+    DATE_AND_PLACE:'Date and place', 
+    EXPLANATION: 'Explanation', 
+    ATTACHMENT: 'Attachment', 
+    CANCEL: 'Cancel', 
+    SEND: 'Send'
   };
    
   var translationsPL= {
@@ -92,9 +103,19 @@ config(['$locationProvider', '$routeProvider', '$translateProvider', function($l
     
     SUBMITED_PROPOSALS: 'Złożone wnioski',
     SUBMIT_APPEAL: 'Złóż odwołanie',
-    CORRECT_PROPOSAL: 'Popraw wniosek'
+    CORRECT_PROPOSAL: 'Popraw wniosek',
 
-
+    NAME_AND_SURNAME: 'Imię i nazwisko', 
+    ID_STUDENT: 'ID Studenta', 
+    COURSE: 'Kurs', 
+    YEAR_OF_STUDY: 'Rok studiów', 
+    RECEIVER: 'Odbiorca', 
+    DATE_AND_PLACE: 'Data i miejsce', 
+    EXPLANATION: 'Uzasadnienie', 
+    ATTACHMENT: 'Załaczniki', 
+    CANCEL: 'Anuluj', 
+    SEND: 'Wyslij podanie'
+    
   };
 
   $translateProvider.translations('en', translationsEN);
